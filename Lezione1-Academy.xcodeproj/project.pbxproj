@@ -14,6 +14,9 @@
 		3804415027425C420031A535 /* mappa-pagina1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3804414F27425C420031A535 /* mappa-pagina1.png */; };
 		380E5D862742AEEB00699B43 /* Color2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380E5D852742AEEB00699B43 /* Color2.xcassets */; };
 		380E5D882742AFDF00699B43 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E5D872742AFDF00699B43 /* ColorManager.swift */; };
+		384BFA8327441AA300F6D87A /* Map1Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384BFA8227441AA300F6D87A /* Map1Page.swift */; };
+		384BFA8527441B2A00F6D87A /* 2PaginaCalendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384BFA8427441B2A00F6D87A /* 2PaginaCalendario.swift */; };
+		384BFA8727441CEB00F6D87A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384BFA8627441CEB00F6D87A /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		380E5D852742AEEB00699B43 /* Color2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color2.xcassets; sourceTree = "<group>"; };
 		380E5D872742AFDF00699B43 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		380E5D892742BE2B00699B43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		384BFA8227441AA300F6D87A /* Map1Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map1Page.swift; sourceTree = "<group>"; };
+		384BFA8427441B2A00F6D87A /* 2PaginaCalendario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2PaginaCalendario.swift; sourceTree = "<group>"; };
+		384BFA8627441CEB00F6D87A /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,9 @@
 				3804413F274252E10031A535 /* Lezione1_AcademyApp.swift */,
 				38044141274252E10031A535 /* ContentView.swift */,
 				380E5D872742AFDF00699B43 /* ColorManager.swift */,
+				384BFA8227441AA300F6D87A /* Map1Page.swift */,
+				384BFA8427441B2A00F6D87A /* 2PaginaCalendario.swift */,
+				384BFA8627441CEB00F6D87A /* TabBar.swift */,
 				38044143274252E30031A535 /* Assets.xcassets */,
 				380E5D852742AEEB00699B43 /* Color2.xcassets */,
 				38044145274252E30031A535 /* Preview Content */,
@@ -150,8 +159,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				384BFA8527441B2A00F6D87A /* 2PaginaCalendario.swift in Sources */,
 				380E5D882742AFDF00699B43 /* ColorManager.swift in Sources */,
 				38044142274252E10031A535 /* ContentView.swift in Sources */,
+				384BFA8727441CEB00F6D87A /* TabBar.swift in Sources */,
+				384BFA8327441AA300F6D87A /* Map1Page.swift in Sources */,
 				38044140274252E10031A535 /* Lezione1_AcademyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,8 +11,8 @@ import SwiftUI
 struct ColorManager {
     // create static variables for custom colors
     static let ORANGE = Color("ORANGE")
-    static let VERDE = Color("VERDE")
-
+    static let GREEN = Color("GREEN")
+    static let GREENL = Color("GREENL")
     //... add the rest of your colors here
 }
 
@@ -20,7 +20,8 @@ struct ColorManager {
 // this will allow you to just type .spotifyGreen and you wont have to use ColorManager.spotifyGreen
 extension Color {
     static let ORANGE = Color("ORANGE")
-    static let VERDE = Color("VERDE")
+    static let GREEN = Color("GREEN")
+    static let GREENL = Color("GREENL")
 
  
     // ... add the rest of your colors here
