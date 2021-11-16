@@ -13,7 +13,8 @@ var body: some View {
         Text("Today Discover ")
             .font(.title)
             .fontWeight(.bold)
-            .padding(.bottom, 10.0)
+          
+            
         
         ScrollView(.horizontal){
             HStack {
@@ -23,9 +24,9 @@ var body: some View {
                         Circle()
                             .fill(ColorManager.GREEN)
                             .frame(width: 34, height: 34)
-    
+                           
                             Text("1")
-                                .foregroundColor(Color.white)
+                       .foregroundColor(Color.white)
                                 
                         }//ZStack for numbers
                    
@@ -33,16 +34,14 @@ var body: some View {
                             .fill(ColorManager.GREENL)
                             .frame(width: 63, height: 103)
                             .scaleEffect()
+                        
                     } //Vstack for calendar
                 } //ForEach
-                
-               
-            } //Hstack
-            .mask(
-                RoundedRectangle(cornerRadius: 44)
-                    .foregroundColor(.black)
-                    .scaleEffect()
-            )
+            }//Hstack
+//            .mask(
+//                RoundedRectangle(cornerRadius: 44)
+//                    .frame(width: 63, height:150 , alignment: .top)
+//                    .opacity(1) )
            
             
         }
@@ -50,24 +49,32 @@ var body: some View {
         
         
     ScrollView(.horizontal){
+        VStack{
+           
         HStack{
-            ForEach(countries, id:\.self) {country in
+            ForEach(countries,id:\.self ) {country in
+                VStack{
+                    
+                    Text("come si mettono i nomi?")
         Image(country)
         .resizable()
         .frame(width: 241, height: 292, alignment: .center)
-        .clipShape(Capsule())
+        
       
 //            .background(Color.white)
-//            .cornerRadius(5)
+       .cornerRadius(5)
 //            .statusBar(hidden: false)
 //            .shadow(color: Color.gray ,radius:26, x:-5, y:13)
         
-        
+                }
             }
-        } //ForEach
+        }
+        }
             
-    }//ForEach2
-} //Vstack
+    }
+    .offset(y:30)
+    }
+    .padding(.bottom, 160) //Vstack
     } //body
 
 } //view
