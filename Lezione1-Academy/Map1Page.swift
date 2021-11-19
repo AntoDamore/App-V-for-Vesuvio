@@ -19,13 +19,20 @@ struct ContentView: View {
                 .resizable()
                 .frame(width: 300, height: 200, alignment: .center)
                 .padding(100)
-                
             Text ("1 di 25 ")
                 
             ProgressView(value: 0.5)
                 .frame(width: 300, height: 200, alignment: .top)
                 .progressViewStyle(LinearProgressViewStyle(tint:ColorManager.ORANGE))
                 
+//            CircularProgress(
+//              percentage: 1,
+//              fontSize: 2,
+//              backgroundColor: Color,
+//              fontColor: Color,
+//              borderColor1: Color,
+//              borderColor2: LinearGradient,
+//              borderWidth: CGFloat)
             
                 
         }

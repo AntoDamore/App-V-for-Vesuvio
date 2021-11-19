@@ -17,6 +17,10 @@
 		384BFA8327441AA300F6D87A /* Map1Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384BFA8227441AA300F6D87A /* Map1Page.swift */; };
 		384BFA8527441B2A00F6D87A /* 2PaginaCalendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384BFA8427441B2A00F6D87A /* 2PaginaCalendario.swift */; };
 		384BFA8727441CEB00F6D87A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384BFA8627441CEB00F6D87A /* TabBar.swift */; };
+		38B185EA27451F9D0003BA79 /* Progress-Bar in Frameworks */ = {isa = PBXBuildFile; productRef = 38B185E927451F9D0003BA79 /* Progress-Bar */; };
+		38B185EC274542500003BA79 /* First-Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B185EB274542500003BA79 /* First-Food.swift */; };
+		38B185EE27454B200003BA79 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B185ED27454B200003BA79 /* Carousel.swift */; };
+		38F124A32746A45400667D64 /* Cerchietto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F124A22746A45400667D64 /* Cerchietto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,9 @@
 		384BFA8227441AA300F6D87A /* Map1Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map1Page.swift; sourceTree = "<group>"; };
 		384BFA8427441B2A00F6D87A /* 2PaginaCalendario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2PaginaCalendario.swift; sourceTree = "<group>"; };
 		384BFA8627441CEB00F6D87A /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		38B185EB274542500003BA79 /* First-Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "First-Food.swift"; sourceTree = "<group>"; };
+		38B185ED27454B200003BA79 /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
+		38F124A22746A45400667D64 /* Cerchietto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cerchietto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38B185EA27451F9D0003BA79 /* Progress-Bar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,11 +73,14 @@
 			isa = PBXGroup;
 			children = (
 				380E5D892742BE2B00699B43 /* Info.plist */,
-				3804413F274252E10031A535 /* Lezione1_AcademyApp.swift */,
+				38F124A22746A45400667D64 /* Cerchietto.swift */,
 				38044141274252E10031A535 /* ContentView.swift */,
+				38B185ED27454B200003BA79 /* Carousel.swift */,
+				3804413F274252E10031A535 /* Lezione1_AcademyApp.swift */,
 				380E5D872742AFDF00699B43 /* ColorManager.swift */,
 				384BFA8227441AA300F6D87A /* Map1Page.swift */,
 				384BFA8427441B2A00F6D87A /* 2PaginaCalendario.swift */,
+				38B185EB274542500003BA79 /* First-Food.swift */,
 				384BFA8627441CEB00F6D87A /* TabBar.swift */,
 				38044143274252E30031A535 /* Assets.xcassets */,
 				380E5D852742AEEB00699B43 /* Color2.xcassets */,
@@ -103,6 +114,9 @@
 			dependencies = (
 			);
 			name = "Lezione1-Academy";
+			packageProductDependencies = (
+				38B185E927451F9D0003BA79 /* Progress-Bar */,
+			);
 			productName = "Lezione1-Academy";
 			productReference = 3804413C274252E10031A535 /* Lezione1-Academy.app */;
 			productType = "com.apple.product-type.application";
@@ -131,6 +145,9 @@
 				Base,
 			);
 			mainGroup = 38044133274252E10031A535;
+			packageReferences = (
+				38B185E827451F9D0003BA79 /* XCRemoteSwiftPackageReference "Progress-Bar-SwifttUI" */,
+			);
 			productRefGroup = 3804413D274252E10031A535 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -160,11 +177,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				384BFA8527441B2A00F6D87A /* 2PaginaCalendario.swift in Sources */,
+				38B185EC274542500003BA79 /* First-Food.swift in Sources */,
+				38F124A32746A45400667D64 /* Cerchietto.swift in Sources */,
 				380E5D882742AFDF00699B43 /* ColorManager.swift in Sources */,
 				38044142274252E10031A535 /* ContentView.swift in Sources */,
 				384BFA8727441CEB00F6D87A /* TabBar.swift in Sources */,
 				384BFA8327441AA300F6D87A /* Map1Page.swift in Sources */,
 				38044140274252E10031A535 /* Lezione1_AcademyApp.swift in Sources */,
+				38B185EE27454B200003BA79 /* Carousel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +387,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		38B185E827451F9D0003BA79 /* XCRemoteSwiftPackageReference "Progress-Bar-SwifttUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AmeddahAchraf/Progress-Bar-SwifttUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		38B185E927451F9D0003BA79 /* Progress-Bar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38B185E827451F9D0003BA79 /* XCRemoteSwiftPackageReference "Progress-Bar-SwifttUI" */;
+			productName = "Progress-Bar";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 38044134274252E10031A535 /* Project object */;
 }
