@@ -7,17 +7,18 @@
 
 import SwiftUI
 struct MainView: View {
+   
 var body: some View {
         TabView {
-            CalendarView()
-                .tabItem {
-                    Label("Calendar", systemImage: "calendar")
-                }
+           
             ContentView()
                 .tabItem {
                     Label("Summary", systemImage: "map")
                 }
-           
+            CalendarView()
+                .tabItem {
+                    Label("Calendar", systemImage: "calendar")
+                }
         }
     }
 }

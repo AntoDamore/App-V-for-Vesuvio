@@ -65,7 +65,7 @@ struct CarouselViewEffect: AnimatableModifier {
         let lineSegment = rect.size.width-2*pathRadius
         
         var x:CGFloat = 0
-        var y:CGFloat = 1.2*rect.height
+        var y:CGFloat = 1.35*rect.height
 //        Queste sono le variabili che regolano quanto ampio deve essere l'ellisse sul quale scorre il carosello di cards
         
         if phaseNormalized>=0 && phaseNormalized<1 {
@@ -218,14 +218,20 @@ struct ImageCarousel: View {
     let imageNames = Array(1..<5).map{ "\($0)" }
     var body: some View {
         NavigationView{
-        VStack {
+            VStack {
             Spacer()
+              
             NavigationLink(destination : firstFood() ){
             ImageCarouselView(imageNames: self.imageNames)
                 .frame(width: 400, height: 250)
                 //.background(Color.gray)
                 .padding(100)
+                
             }
+            .offset(x: -20 , y:-140)
+//            .navigationTitle("ccc")
+            .navigationBarHidden(true)
+            
             Spacer()
         }
         .frame(maxWidth: .infinity)
@@ -233,3 +239,4 @@ struct ImageCarousel: View {
     }
 }
 }
+   

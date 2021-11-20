@@ -11,12 +11,12 @@
 		38044142274252E10031A535 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38044141274252E10031A535 /* ContentView.swift */; };
 		38044144274252E30031A535 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38044143274252E30031A535 /* Assets.xcassets */; };
 		38044147274252E30031A535 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38044146274252E30031A535 /* Preview Assets.xcassets */; };
-		3804415027425C420031A535 /* mappa-pagina1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3804414F27425C420031A535 /* mappa-pagina1.png */; };
 		380E5D862742AEEB00699B43 /* Color2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380E5D852742AEEB00699B43 /* Color2.xcassets */; };
 		380E5D882742AFDF00699B43 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E5D872742AFDF00699B43 /* ColorManager.swift */; };
 		384BFA8327441AA300F6D87A /* Map1Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384BFA8227441AA300F6D87A /* Map1Page.swift */; };
 		384BFA8527441B2A00F6D87A /* 2PaginaCalendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384BFA8427441B2A00F6D87A /* 2PaginaCalendario.swift */; };
 		384BFA8727441CEB00F6D87A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384BFA8627441CEB00F6D87A /* TabBar.swift */; };
+		38921C712748F8DB00BDFD49 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38921C702748F8DB00BDFD49 /* Launch Screen.storyboard */; };
 		38B185EA27451F9D0003BA79 /* Progress-Bar in Frameworks */ = {isa = PBXBuildFile; productRef = 38B185E927451F9D0003BA79 /* Progress-Bar */; };
 		38B185EC274542500003BA79 /* First-Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B185EB274542500003BA79 /* First-Food.swift */; };
 		38B185EE27454B200003BA79 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B185ED27454B200003BA79 /* Carousel.swift */; };
@@ -29,13 +29,13 @@
 		38044141274252E10031A535 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		38044143274252E30031A535 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38044146274252E30031A535 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3804414F27425C420031A535 /* mappa-pagina1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mappa-pagina1.png"; sourceTree = "<group>"; };
 		380E5D852742AEEB00699B43 /* Color2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color2.xcassets; sourceTree = "<group>"; };
 		380E5D872742AFDF00699B43 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		380E5D892742BE2B00699B43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		384BFA8227441AA300F6D87A /* Map1Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map1Page.swift; sourceTree = "<group>"; };
 		384BFA8427441B2A00F6D87A /* 2PaginaCalendario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2PaginaCalendario.swift; sourceTree = "<group>"; };
 		384BFA8627441CEB00F6D87A /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		38921C702748F8DB00BDFD49 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		38B185EB274542500003BA79 /* First-Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "First-Food.swift"; sourceTree = "<group>"; };
 		38B185ED27454B200003BA79 /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
 		38F124A22746A45400667D64 /* Cerchietto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cerchietto.swift; sourceTree = "<group>"; };
@@ -80,6 +80,7 @@
 				380E5D872742AFDF00699B43 /* ColorManager.swift */,
 				384BFA8227441AA300F6D87A /* Map1Page.swift */,
 				384BFA8427441B2A00F6D87A /* 2PaginaCalendario.swift */,
+				38921C702748F8DB00BDFD49 /* Launch Screen.storyboard */,
 				38B185EB274542500003BA79 /* First-Food.swift */,
 				384BFA8627441CEB00F6D87A /* TabBar.swift */,
 				38044143274252E30031A535 /* Assets.xcassets */,
@@ -93,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				38044146274252E30031A535 /* Preview Assets.xcassets */,
-				3804414F27425C420031A535 /* mappa-pagina1.png */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -164,7 +164,7 @@
 			files = (
 				380E5D862742AEEB00699B43 /* Color2.xcassets in Resources */,
 				38044147274252E30031A535 /* Preview Assets.xcassets in Resources */,
-				3804415027425C420031A535 /* mappa-pagina1.png in Resources */,
+				38921C712748F8DB00BDFD49 /* Launch Screen.storyboard in Resources */,
 				38044144274252E30031A535 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
