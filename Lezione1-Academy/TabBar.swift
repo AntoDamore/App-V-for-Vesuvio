@@ -11,13 +11,14 @@ struct MainView: View {
 var body: some View {
         TabView {
            
-            ContentView()
-                .tabItem {
-                    Label("Summary", systemImage: "map")
-                }
+            
             CalendarView()
                 .tabItem {
                     Label("Calendar", systemImage: "calendar")
+                }
+            ContentView()
+                .tabItem {
+                    Label("Summary", systemImage: "map")
                 }
         }
     }

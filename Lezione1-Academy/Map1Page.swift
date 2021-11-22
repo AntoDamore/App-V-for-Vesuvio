@@ -9,11 +9,10 @@ import SwiftUI
 import Progress_Bar
 
 struct ContentView: View {
-    
     var body: some View {
         VStack{
            
-            Text ("Progress View  ")
+            Text ("Progress View ")
                 .font(.title)
                 .fontWeight(.bold)
                 .padding(.top, -20.0)
@@ -27,11 +26,12 @@ struct ContentView: View {
                 .font(.body)
                 .fontWeight(.semibold)
                 .padding()
+       
 //            ProgressView(value: 0.1)
 //                .frame(width: 300, height: 200, alignment: .top)
 //                .progressViewStyle(LinearProgressViewStyle(tint:ColorManager.ORANGE))
             
-            CircularProgress(percentage: 0.1,
+            CircularProgress(percentage: 0.16,
     fontSize: 25,
     backgroundColor: .white,
     fontColor : .black,

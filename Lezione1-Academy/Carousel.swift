@@ -38,6 +38,7 @@ struct CarouselViewEffect: AnimatableModifier {
         return pathPosition(at: basePhase+interpolatedRemainder, rect: rect)
     }
     
+    
     func viewScale(at index: Double, rect: CGRect) -> Double {
         var indexNormalized = CGFloat(index.truncatingRemainder(dividingBy: Double(numberOfCards)))
         if indexNormalized<0 {
@@ -49,7 +50,7 @@ struct CarouselViewEffect: AnimatableModifier {
         if (phaseRemainder<0) {
             phaseRemainder += 1
         }
-
+        
         return scalePhases[Int(indexNormalized)]*(1.0-phaseRemainder) + phaseRemainder*scalePhases[Int(indexNormalized)+1]
     }
     
@@ -66,7 +67,7 @@ struct CarouselViewEffect: AnimatableModifier {
         
         var x:CGFloat = 0
         var y:CGFloat = 1.35*rect.height
-//        Queste sono le variabili che regolano quanto ampio deve essere l'ellisse sul quale scorre il carosello di cards
+        //        Queste sono le variabili che regolano quanto ampio deve essere l'ellisse sul quale scorre il carosello di cards
         
         if phaseNormalized>=0 && phaseNormalized<1 {
             x = phaseNormalized/2*lineSegment + pathRadius
@@ -140,16 +141,16 @@ struct CarouselViewEffect: AnimatableModifier {
         let overlayOpacity = 1.0-Double(viewScale)
         
         let overlay = Color("OverlayColor")
-                        .hueRotation(Angle(radians: self.colorRotation()))
-                        .blendMode(.plusDarker)
-                        .background(Color("OverlayBackground").opacity(overlayOpacity))
-                        .opacity(overlayOpacity)
+            .hueRotation(Angle(radians: self.colorRotation()))
+            .blendMode(.plusDarker)
+            .background(Color("OverlayBackground").opacity(overlayOpacity))
+            .opacity(overlayOpacity)
         
         return content
             .frame(width: itemSize, height: 2*itemSize)//Questa riga controlla la dimensione dei rettangoli. In questo momento hanno un rapporto di 2:3.
             .overlay(overlay)
             .clipShape(RoundedRectangle(cornerRadius: 20))
-//        Prinma il cornerRadius era = 16+itemSize*(1.0-viewScale). Va riguardato questo punto per ottimizzare l'arrotondamento e renderlo omogeneo
+        //        Prinma il cornerRadius era = 16+itemSize*(1.0-viewScale). Va riguardato questo punto per ottimizzare l'arrotondamento e renderlo omogeneo
             .scaleEffect(viewScale)
             .position(position)
     }
@@ -175,40 +176,45 @@ struct ImageCarouselView: View {
     }
     
     var body: some View {
+        
         GeometryReader { geometry in
             ZStack {
-                ForEach (0..<numberOfCards) { index in
+                ForEach (0..<numberOfCards, id:\.self) { index in
+                    
                     Image("\(index+1)")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .modifier(CarouselViewEffect(numberOfCards: numberOfCards, pathRadius: pathRadius, rect: geometry.frame(in: .local), viewIndex: index, offsetValue: Double(index) + Double(scrollOffset)))
-//                        .onTapGesture {
-//                            if !self.isDragging {
-//                                withAnimation(springAnimation){
-//                                    self.scrollOffset += 1
-//                                }
-//                            }
-//                        }
-//                    Bisogna modificare la onTapGesture per far aprire una nuova view col contenuto.
+                    
+                        .onShake {
+                            if !self.isDragging {
+                                withAnimation(springAnimation){
+                                    self.scrollOffset += 1
+                                }
+                            }
+                        }
+                    
                 }
+                
+                //                    Bisogna modificare la onTapGesture per far aprire una nuova view col contenuto.
             }
             .padding()
             //.background(Color.orange)
             .simultaneousGesture( DragGesture(minimumDistance: 1, coordinateSpace: .local)
-                .onChanged { value in
-                    self.dragOffset = self.normalizeDragValue(value.translation.width, rectWidth: geometry.size.width)
-                    self.scrollOffset = baseOffset + dragOffset
-                    self.isDragging = true
+                                    .onChanged { value in
+                self.dragOffset = self.normalizeDragValue(value.translation.width, rectWidth: geometry.size.width)
+                self.scrollOffset = baseOffset + dragOffset
+                self.isDragging = true
+            }
+                                    .onEnded { value in
+                withAnimation(springAnimation){
+                    let predicted = self.baseOffset + self.normalizeDragValue(value.predictedEndTranslation.width, rectWidth: geometry.size.width)
+                    self.scrollOffset = round(self.scrollOffset*0.7 + predicted*0.3)
+                    self.baseOffset = self.scrollOffset
+                    self.dragOffset = 0
                 }
-                .onEnded { value in
-                    withAnimation(springAnimation){
-                        let predicted = self.baseOffset + self.normalizeDragValue(value.predictedEndTranslation.width, rectWidth: geometry.size.width)
-                        self.scrollOffset = round(self.scrollOffset*0.7 + predicted*0.3)
-                        self.baseOffset = self.scrollOffset
-                        self.dragOffset = 0
-                    }
-                    self.isDragging = false
-                }
+                self.isDragging = false
+            }
             )
         }
     }
@@ -217,26 +223,27 @@ struct ImageCarouselView: View {
 struct ImageCarousel: View {
     let imageNames = Array(1..<5).map{ "\($0)" }
     var body: some View {
-        NavigationView{
-            VStack {
+        
+        VStack {
             Spacer()
-              
-            NavigationLink(destination : firstFood() ){
-            ImageCarouselView(imageNames: self.imageNames)
-                .frame(width: 400, height: 250)
+            
+            NavigationLink(destination : Card1()){
+                ImageCarouselView(imageNames: self.imageNames)
+                    .frame(width: 400, height: 250)
                 //.background(Color.gray)
-                .padding(100)
+                    .padding(100)
                 
             }
-            .offset(x: -20 , y:-140)
-//            .navigationTitle("ccc")
-            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
             
+            .offset(x: -20 , y:-140)
+            //            .navigationTitle("ccc")
+            .navigationBarBackButtonHidden(false)
             Spacer()
         }
         .frame(maxWidth: .infinity)
         .background(Color.white)
     }
 }
-}
-   
+
+
