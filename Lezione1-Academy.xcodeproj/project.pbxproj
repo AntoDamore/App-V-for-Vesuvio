@@ -16,11 +16,12 @@
 		384BFA8327441AA300F6D87A /* Map1Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384BFA8227441AA300F6D87A /* Map1Page.swift */; };
 		384BFA8527441B2A00F6D87A /* 2PaginaCalendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384BFA8427441B2A00F6D87A /* 2PaginaCalendario.swift */; };
 		384BFA8727441CEB00F6D87A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384BFA8627441CEB00F6D87A /* TabBar.swift */; };
+		387DBA43274D019900A4B6A6 /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387DBA42274D019900A4B6A6 /* Shake.swift */; };
 		38B185EA27451F9D0003BA79 /* Progress-Bar in Frameworks */ = {isa = PBXBuildFile; productRef = 38B185E927451F9D0003BA79 /* Progress-Bar */; };
-		38B185EC274542500003BA79 /* First-food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B185EB274542500003BA79 /* First-food.swift */; };
-		38B185EE27454B200003BA79 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B185ED27454B200003BA79 /* Carousel.swift */; };
-		38B6E6A6274B9227009E042B /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B6E6A5274B9227009E042B /* Shake.swift */; };
 		38B6E6AD274B93E2009E042B /* palillos.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 38B6E6AC274B93E2009E042B /* palillos.mp3 */; };
+		38D23DF9274C3E9E0075AB5F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D23DF8274C3E9E0075AB5F /* CardView.swift */; };
+		38D23DFB274C3EC60075AB5F /* CardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D23DFA274C3EC60075AB5F /* CardList.swift */; };
+		38D23E00274C47510075AB5F /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D23DFF274C47510075AB5F /* Carousel.swift */; };
 		38F124A32746A45400667D64 /* Cerchietto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F124A22746A45400667D64 /* Cerchietto.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,10 +37,11 @@
 		384BFA8227441AA300F6D87A /* Map1Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map1Page.swift; sourceTree = "<group>"; };
 		384BFA8427441B2A00F6D87A /* 2PaginaCalendario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2PaginaCalendario.swift; sourceTree = "<group>"; };
 		384BFA8627441CEB00F6D87A /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
-		38B185EB274542500003BA79 /* First-food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "First-food.swift"; sourceTree = "<group>"; };
-		38B185ED27454B200003BA79 /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
-		38B6E6A5274B9227009E042B /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
+		387DBA42274D019900A4B6A6 /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
 		38B6E6AC274B93E2009E042B /* palillos.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = palillos.mp3; sourceTree = "<group>"; };
+		38D23DF8274C3E9E0075AB5F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		38D23DFA274C3EC60075AB5F /* CardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardList.swift; sourceTree = "<group>"; };
+		38D23DFF274C47510075AB5F /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Carousel.swift; path = ../../Carousel.swift; sourceTree = "<group>"; };
 		38F124A22746A45400667D64 /* Cerchietto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cerchietto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,17 +77,16 @@
 			isa = PBXGroup;
 			children = (
 				380E5D892742BE2B00699B43 /* Info.plist */,
+				38D23DFE274C42BC0075AB5F /* Card */,
 				38F124A22746A45400667D64 /* Cerchietto.swift */,
 				38044141274252E10031A535 /* ContentView.swift */,
 				38B6E6AC274B93E2009E042B /* palillos.mp3 */,
-				38B185ED27454B200003BA79 /* Carousel.swift */,
 				3804413F274252E10031A535 /* Lezione1_AcademyApp.swift */,
 				380E5D872742AFDF00699B43 /* ColorManager.swift */,
 				384BFA8227441AA300F6D87A /* Map1Page.swift */,
 				384BFA8427441B2A00F6D87A /* 2PaginaCalendario.swift */,
-				38B185EB274542500003BA79 /* First-food.swift */,
-				38B6E6A5274B9227009E042B /* Shake.swift */,
 				384BFA8627441CEB00F6D87A /* TabBar.swift */,
+				387DBA42274D019900A4B6A6 /* Shake.swift */,
 				38044143274252E30031A535 /* Assets.xcassets */,
 				380E5D852742AEEB00699B43 /* Color2.xcassets */,
 				38044145274252E30031A535 /* Preview Content */,
@@ -99,6 +100,16 @@
 				38044146274252E30031A535 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		38D23DFE274C42BC0075AB5F /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				38D23DFF274C47510075AB5F /* Carousel.swift */,
+				38D23DFA274C3EC60075AB5F /* CardList.swift */,
+				38D23DF8274C3E9E0075AB5F /* CardView.swift */,
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,15 +191,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				384BFA8527441B2A00F6D87A /* 2PaginaCalendario.swift in Sources */,
-				38B185EC274542500003BA79 /* First-food.swift in Sources */,
-				38B6E6A6274B9227009E042B /* Shake.swift in Sources */,
+				38D23E00274C47510075AB5F /* Carousel.swift in Sources */,
 				38F124A32746A45400667D64 /* Cerchietto.swift in Sources */,
+				387DBA43274D019900A4B6A6 /* Shake.swift in Sources */,
 				380E5D882742AFDF00699B43 /* ColorManager.swift in Sources */,
 				38044142274252E10031A535 /* ContentView.swift in Sources */,
 				384BFA8727441CEB00F6D87A /* TabBar.swift in Sources */,
+				38D23DFB274C3EC60075AB5F /* CardList.swift in Sources */,
 				384BFA8327441AA300F6D87A /* Map1Page.swift in Sources */,
 				38044140274252E10031A535 /* Lezione1_AcademyApp.swift in Sources */,
-				38B185EE27454B200003BA79 /* Carousel.swift in Sources */,
+				38D23DF9274C3E9E0075AB5F /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

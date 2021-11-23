@@ -36,6 +36,7 @@ struct Cerchietto: View {
                 }
               
                 if day == 1 {
+//mettere qui 
                     Circle()
                         .fill(zoom ? Color.orange : Color.orange)
                         .frame(width: 37, height: 37)
@@ -45,7 +46,10 @@ struct Cerchietto: View {
                         .fill(zoom ? Color.yellow : Color.yellow)
                         .frame(width: 20, height: 20)
                     .offset(x: 0, y: 25)
-                 
+
+                   
+                        
+                    
                 }
                 if day == 3 {
                     Circle()
@@ -79,8 +83,3 @@ struct Cerchietto: View {
     }
 }
 
-struct Cerchietto_Previews: PreviewProvider {
-    static var previews: some View {
-        Cerchietto(day: 1)
-    }
-}

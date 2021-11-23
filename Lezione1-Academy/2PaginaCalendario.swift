@@ -6,8 +6,8 @@
 //
 import SwiftUI
 struct CalendarView : View {
-  @State private var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
-  
+    @State private var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
+    
     @State private var countries = [
         Country(id: 1, name: "Italy" ),
         Country(id: 2, name : "Australia"),
@@ -47,21 +47,21 @@ struct CalendarView : View {
     
     var body: some View {
         NavigationView{
-           VStack{
+            VStack{
                 Text(" Daily Journey")
                     .font(.largeTitle)
                     .fontWeight(.bold)
-               
+                
                 ScrollView(.horizontal,showsIndicators: false) {
                     HStack {
                         ForEach(numbers, id:\.self) { day in
-                           
+                            
                             if day == 4 {
                                 Cerchietto(zoom: true, day: day)
                             } else {
                                 Cerchietto(day: day)
                             }
-                            }
+                        }
                         //ForEach
                     }
                     //Hstack
@@ -79,7 +79,7 @@ struct CalendarView : View {
                                         .fontWeight(.semibold)
                                         .padding()
                                     
-                                    NavigationLink(destination: ImageCarousel()){
+                                    NavigationLink(destination: Carousel()){
                                         ZStack {
                                             RoundedRectangle(cornerRadius: 25)
                                             Color.white
@@ -93,13 +93,12 @@ struct CalendarView : View {
                                                 .resizable()
                                                 .frame(width: 241, height: 292, alignment: .center)
                                             
-                                                                        }
+                                        }
                                         
-                                                       
-                                                }
-                                
+                                    }
+                                    
                                     .padding()
-                                        .offset(x: 15, y: -20)
+                                    .offset(x: 15, y: -20)
                                 }
                             }
                         }}
@@ -112,8 +111,13 @@ struct CalendarView : View {
         }
         
         
-    //body
+        //body
         
     }  //view
     
+}
+struct ContentView_Previews1: PreviewProvider {
+    static var previews: some View {
+        CalendarView()
+    }
 }
