@@ -17,6 +17,7 @@
 		384BFA8527441B2A00F6D87A /* 2PaginaCalendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384BFA8427441B2A00F6D87A /* 2PaginaCalendario.swift */; };
 		384BFA8727441CEB00F6D87A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384BFA8627441CEB00F6D87A /* TabBar.swift */; };
 		387DBA43274D019900A4B6A6 /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387DBA42274D019900A4B6A6 /* Shake.swift */; };
+		387DBA79274D372C00A4B6A6 /* iPhonelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 387DBA78274D372C00A4B6A6 /* iPhonelogo.png */; };
 		38B185EA27451F9D0003BA79 /* Progress-Bar in Frameworks */ = {isa = PBXBuildFile; productRef = 38B185E927451F9D0003BA79 /* Progress-Bar */; };
 		38B6E6AD274B93E2009E042B /* palillos.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 38B6E6AC274B93E2009E042B /* palillos.mp3 */; };
 		38D23DF9274C3E9E0075AB5F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D23DF8274C3E9E0075AB5F /* CardView.swift */; };
@@ -38,6 +39,7 @@
 		384BFA8427441B2A00F6D87A /* 2PaginaCalendario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2PaginaCalendario.swift; sourceTree = "<group>"; };
 		384BFA8627441CEB00F6D87A /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		387DBA42274D019900A4B6A6 /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
+		387DBA78274D372C00A4B6A6 /* iPhonelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhonelogo.png; sourceTree = "<group>"; };
 		38B6E6AC274B93E2009E042B /* palillos.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = palillos.mp3; sourceTree = "<group>"; };
 		38D23DF8274C3E9E0075AB5F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		38D23DFA274C3EC60075AB5F /* CardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardList.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				380E5D892742BE2B00699B43 /* Info.plist */,
+				387DBA78274D372C00A4B6A6 /* iPhonelogo.png */,
 				38D23DFE274C42BC0075AB5F /* Card */,
 				38F124A22746A45400667D64 /* Cerchietto.swift */,
 				38044141274252E10031A535 /* ContentView.swift */,
@@ -178,6 +181,7 @@
 			files = (
 				380E5D862742AEEB00699B43 /* Color2.xcassets in Resources */,
 				38044147274252E30031A535 /* Preview Assets.xcassets in Resources */,
+				387DBA79274D372C00A4B6A6 /* iPhonelogo.png in Resources */,
 				38B6E6AD274B93E2009E042B /* palillos.mp3 in Resources */,
 				38044144274252E30031A535 /* Assets.xcassets in Resources */,
 			);
@@ -335,6 +339,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Lezione1-Academy/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = DayVerse;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -364,6 +369,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Lezione1-Academy/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = DayVerse;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
