@@ -6,18 +6,18 @@ struct CardListOne: View {
     var body: some View {
         VStack {
             ScrollView{
-                Text("Tortilla de patatas")
+                Text(stato.food.title)
                     .font(.title)
                     .fontWeight(.bold)
                     .frame(height: 20.0)
                 
-                Image("spain-fooddue")
+                Image("\(stato.name).food")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 355, height: 408)
                     .padding(.top, 10.0)
                 
-                Text("Celebrated as national dish by Spaniards, Spanish tortilla is an essential part of the Spanish cuisine. It is an omelette made with eggs and potatoes, optionally including onion. It is often served at room temperature as a tapa. You’ll love it!")
+                Text(stato.food.descrption)
                     .font(.body)
                     .padding(.horizontal)
                     .frame(width: 389.0, height: 203.0)
@@ -27,7 +27,7 @@ struct CardListOne: View {
                     .fontWeight(.semibold)
                     .frame(width: 88.0, height: 20.0)
                 
-                Text("Ingredients: \n - 1 onion, thinly sliced \n - 3 potatoes, thinly sliced \n - 500 ml olive oil \n - 6 eggs \n - 1 pinch salt \n \nProcedure: \n \nHeat up the olive oil in a really hot pan. \nThinly slice the onion, then slice the potatoes into 3-millimeters thick pieces. Fry the vegetables in the olive oil over high heat for 10-15 minutes until they caramelize. Drain the vegetables and save the olive oil for later use. \nAdd 6 eggs to a bowl and whisk. Add the fried vegetables, stir, and leave to set for 15-20 minutes. \nIn a nonstick pan, fry the egg mixture over high heat for 1 minute, then reduce to a low heat for 2-4 minutes.")
+                Text(stato.food.recipe)
                     .font(.body)
                     .padding(.horizontal)
                     .frame(width: 389.0)

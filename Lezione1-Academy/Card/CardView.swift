@@ -86,7 +86,7 @@ struct CardViewFour: View {
                         .font(.title)
                         .foregroundColor(Color.black).bold()
                     
-                    Image("spain-cinema")
+                    Image("\(stato.name).cinema")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 219.4, height: 383)
