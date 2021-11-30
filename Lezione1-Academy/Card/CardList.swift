@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct CardListOne: View {
+    
+    @State var stato : Country 
     var body: some View {
         VStack {
             ScrollView{
@@ -35,6 +37,8 @@ struct CardListOne: View {
 }
 
 struct CardListTwo: View {
+    @State var stato : Country
+
     var body: some View {
         VStack {
             ScrollView{
@@ -58,6 +62,8 @@ struct CardListTwo: View {
     }
 }
 struct CardListThree: View {
+    @State var stato : Country
+
     var body: some View {
         VStack {
             ScrollView{
@@ -97,6 +103,8 @@ struct CardListThree: View {
 }
 
 struct CardListFour: View {
+    @State var stato : Country
+
     var body: some View {
         VStack {
             ScrollView{

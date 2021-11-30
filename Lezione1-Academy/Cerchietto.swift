@@ -2,7 +2,7 @@ import SwiftUI
 
 struct Cerchietto: View {
     @State var zoom = false
-    @State var day:Int
+    @State var day: Int
     
     var body: some View {
         VStack {

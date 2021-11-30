@@ -5,45 +5,37 @@
 //  Created by Antonio D'amore on 16/11/21.
 //
 import SwiftUI
+import CoreMedia
 struct CalendarView : View {
-    @State private var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
-    
-    @State private var countries = [
-        Country(id: 1, name: "Italy" ),
-        Country(id: 2, name : "Australia"),
-        Country(id: 3, name : "Singapore"),
-        Country(id: 4, name : "Spain"),
-        Country(id: 5, name : "Brazil"),
-        Country(id: 6, name : "Chile"),
-        Country(id: 7, name : "China"),
-        Country(id: 8, name : "Cyprus"),
-        Country(id: 9, name : "Iceland"),
-        Country(id: 10, name : "India"),
-        Country(id: 11, name : "Iran") ,
-        Country(id: 12, name : "Singapore"),
-        Country(id: 13, name : "Japan"),
-        Country(id: 14, name: "Kenya"),
-        Country(id: 15, name: "Madagascar"),
-        Country(id: 16, name: "Mexico"),
-        Country(id: 17, name: "Morocco"),
-        Country(id: 18, name: "New Zealand"),
-        Country(id: 19, name: "Papua New Guinea"),
-        Country(id: 20, name: "Russia"),
-        Country(id: 21, name: "South Korea"),
-        Country(id: 22, name: "Sweden"),
-        Country(id: 23, name: "Uganda"),
-        Country(id: 24, name: "Venezuela"),
-        Country(id: 25, name: "Fiji")
+    @StateObject var archive = Countries(countries: [
+        italia
+//        Country(id: 1, name: "Italy" ),
+//        Country(id: 2, name : "Australia"),
+//        Country(id: 3, name : "Singapore"),
+//        Country(id: 4, name : "Spain"),
+//        Country(id: 5, name : "Brazil"),
+//        Country(id: 6, name : "Chile"),
+//        Country(id: 7, name : "China"),
+//        Country(id: 8, name : "Cyprus"),
+//        Country(id: 9, name : "Iceland"),
+//        Country(id: 10, name : "India"),
+//        Country(id: 11, name : "Iran") ,
+//        Country(id: 12, name : "Singapore"),
+//        Country(id: 13, name : "Japan"),
+//        Country(id: 14, name: "Kenya"),
+//        Country(id: 15, name: "Madagascar"),
+//        Country(id: 16, name: "Mexico"),
+//        Country(id: 17, name: "Morocco"),
+//        Country(id: 18, name: "New Zealand"),
+//        Country(id: 19, name: "Papua New Guinea"),
+//        Country(id: 20, name: "Russia"),
+//        Country(id: 21, name: "South Korea"),
+//        Country(id: 22, name: "Sweden"),
+//        Country(id: 23, name: "Uganda"),
+//        Country(id: 24, name: "Venezuela"),
+//        Country(id: 25, name: "Fiji")
         
-    ]
-    
-    struct Country : Identifiable {
-        var id: Int
-        let name : String
-        
-    }
-    
-    var n = 25
+    ])
     
     var body: some View {
         NavigationView{
@@ -54,12 +46,12 @@ struct CalendarView : View {
                 
                 ScrollView(.horizontal,showsIndicators: false) {
                     HStack {
-                        ForEach(numbers, id:\.self) { day in
+                        ForEach(archive.countries) {stato in
                             
-                            if day == 4 {
-                                Cerchietto(zoom: true, day: day)
+                            if stato.id == 4 {
+                                Cerchietto(zoom: true, day: stato.id)
                             } else {
-                                Cerchietto(day: day)
+                                Cerchietto(day: stato.id)
                             }
                         }
                         //ForEach
@@ -72,28 +64,27 @@ struct CalendarView : View {
                 ScrollView(.horizontal, showsIndicators: false){
                     VStack{
                         HStack{
-                            ForEach(countries) {country in
+                            ForEach(archive.countries) {stato in
                                 VStack{
-                                    Text(country.name)
+                                    Text(stato.name)
                                         .font(.title)
                                         .fontWeight(.semibold)
                                         .padding()
                                     
-                                    NavigationLink(destination: Carousel()){
-                                        ZStack {
-                                            RoundedRectangle(cornerRadius: 25)
-                                            Color.white
-                                                .frame(width: 241, height: 292)
-                                                .cornerRadius(25)
-                                                .shadow(color: .gray, radius: 4 , x: -5, y: 13)
-                                                .padding(1)
-                                            
-                                            
-                                            Image(country.name)
-                                                .resizable()
-                                                .frame(width: 241, height: 292, alignment: .center)
-                                            
-                                        }
+                                    NavigationLink(destination: Carousel(stato: stato)){
+                                        
+                                                           ZStack {
+                                        RoundedRectangle(cornerRadius: 25)
+                                        Color.white
+                                            .frame(width: 241, height: 292)
+                                            .cornerRadius(25)
+                                            .shadow(color: .gray, radius: 4 , x: -5, y: 13)
+                                            .padding(1)
+                                          
+                                                Image(stato.name)
+                                                    .resizable()
+                                                    .frame(width: 241, height: 292, alignment: .center)
+                                                          }
                                         
                                     }
                                     

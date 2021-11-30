@@ -3,15 +3,16 @@
 import SwiftUI
 
 struct CardViewOne: View {
+    @State var stato : Country
     var body: some View {
-        NavigationLink(destination: CardListOne()) {
+        NavigationLink(destination: CardListOne(stato: stato )) {
             ZStack(alignment: .bottomLeading) {
                 VStack{
                     Text("Food")
                         .font(.title)
                         .foregroundColor(Color.black).bold()
                     
-                    Image("spain-food")
+                    Image("\(stato.name).food")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 219.4, height: 383)
@@ -27,15 +28,17 @@ struct CardViewOne: View {
 }
 
 struct CardViewTwo: View {
+    @State var stato : Country
+
     var body: some View {
-        NavigationLink(destination: CardListTwo()) {
+        NavigationLink(destination: CardListTwo(stato : stato )) {
             ZStack(alignment: .bottomLeading) {
                 VStack{
                     Text("Festival")
                         .font(.title)
                         .foregroundColor(Color.black).bold()
                     
-                    Image("spain-festival")
+                    Image("\(stato.name).festival")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 219.4, height: 383)
@@ -50,15 +53,17 @@ struct CardViewTwo: View {
 }
 
 struct CardViewThree: View {
+    @State var stato : Country
+
     var body: some View {
-        NavigationLink(destination: CardListThree()) {
+        NavigationLink(destination: CardListThree(stato : stato)) {
             ZStack(alignment: .bottomLeading) {
                 VStack{
                     Text("Music")
                         .font(.title)
                         .foregroundColor(Color.black).bold()
                     
-                    Image("spain-music")
+                    Image("\(stato.name).music")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 219.4, height: 383)
@@ -71,8 +76,10 @@ struct CardViewThree: View {
     }
 }
 struct CardViewFour: View {
+    @State var stato : Country
+
     var body: some View {
-        NavigationLink(destination: CardListFour()) {
+        NavigationLink(destination: CardListFour(stato : stato)) {
             ZStack(alignment: .bottomLeading) {
                 VStack{
                     Text("Cinema")

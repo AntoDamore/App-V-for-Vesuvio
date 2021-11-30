@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct Carousel: View {
+@State var stato : Country
+    
     var body: some View {
       
         ScrollView(.horizontal, showsIndicators: false) {
@@ -8,7 +10,7 @@ struct Carousel: View {
   
             GeometryReader { geometry in
                 ImageCarouselView(numberOfImages: 1) {
-                    CardViewOne()
+                    CardViewOne(stato : stato)
                     
                 }
             }
@@ -16,7 +18,7 @@ struct Carousel: View {
                    
                 GeometryReader { geometry in
                     ImageCarouselView(numberOfImages: 1) {
-                        CardViewTwo()
+                        CardViewTwo(stato : stato)
                         
                     }
                 }.frame(width: 250, height: 700)
@@ -24,14 +26,14 @@ struct Carousel: View {
                 
                 GeometryReader { geometry in
                     ImageCarouselView(numberOfImages: 1) {
-                        CardViewThree()
+                        CardViewThree(stato : stato)
                         
                     }
                 } .frame(width: 250, height: 700)
                     
                 GeometryReader { geometry in
                     ImageCarouselView(numberOfImages: 1) {
-                        CardViewFour()
+                        CardViewFour(stato : stato)
                         
                     }
                 }.frame(width: 250, height: 700)
